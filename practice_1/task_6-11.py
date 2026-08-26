@@ -7,10 +7,12 @@ from sklearn.datasets import fetch_california_housing
 data: pandas.DataFrame = fetch_california_housing(as_frame=True).frame
 
 # Использовать метод info().
+
 print("Method info()")
 print(data.info())
 
 # Узнать, есть ли пропущенные значения, используя isna().sum().
+
 print("  ")
 print("Method isna().sum()")
 print(data.isna().sum())
