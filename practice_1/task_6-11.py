@@ -1,10 +1,10 @@
 # Скачать и загрузить данные о стоимости домов в калифорнии,
-# используя библиотеку sklearn. 
+# используя библиотеку sklearn.
 
-from sklearn.datasets import fetch_california_housing
 import pandas
+from sklearn.datasets import fetch_california_housing
 
-data:pandas.DataFrame = fetch_california_housing(as_frame=True).frame
+data: pandas.DataFrame = fetch_california_housing(as_frame=True).frame
 
 # Использовать метод info().
 print("Method info()")

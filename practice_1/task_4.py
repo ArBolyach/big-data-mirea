@@ -6,12 +6,14 @@
 
 a = int(input())
 
-def generateSequence(n:int):
+
+def generateSequence(n: int):
     result = []
     for i in range(n):
         for _ in range(i):
-            if (len(result) == n):
+            if len(result) == n:
                 return result
             result.append(i)
+
 
 print(*generateSequence(a))

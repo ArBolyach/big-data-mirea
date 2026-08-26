@@ -1,9 +1,10 @@
 # Написать программу, которая на вход получает два числа и
 # операцию, которую к ним нужно применить. Должны быть реализованы
 # следующие операции: +, -, /, //, abs – модуль, pow или ** – возведение в
-# степень. 
+# степень.
 
 from enum import Enum
+
 
 class Calculator(Enum):
     SUM = "+"
@@ -14,27 +15,27 @@ class Calculator(Enum):
     POW = "pow"
 
     @staticmethod
-    def sum(a:float,b:float)->float:
-        return a+b
-    
-    @staticmethod
-    def sub(a:float,b:float)->float:
-        return a-b
+    def sum(a: float, b: float) -> float:
+        return a + b
 
     @staticmethod
-    def div(a:float,b:float)->float:
-        return a/b
-    
-    @staticmethod
-    def div_integer(a:float,b:float)->float:
-        return a//b
+    def sub(a: float, b: float) -> float:
+        return a - b
 
     @staticmethod
-    def abs(a:float)->float:
+    def div(a: float, b: float) -> float:
+        return a / b
+
+    @staticmethod
+    def div_integer(a: float, b: float) -> float:
+        return a // b
+
+    @staticmethod
+    def abs(a: float) -> float:
         return abs(a)
 
     @staticmethod
-    def pow(a:float,b:float)->float:
+    def pow(a: float, b: float) -> float:
         return a**b
 
 
@@ -42,19 +43,18 @@ a, b, symbol, result = float(input()), float(input()), input(), 0
 
 match symbol:
     case Calculator.SUM.value:
-        result = Calculator.sum(a,b)
+        result = Calculator.sum(a, b)
     case Calculator.SUB.value:
-        result = Calculator.sub(a,b)
+        result = Calculator.sub(a, b)
     case Calculator.DIV.value:
-        result = Calculator.div(a,b)
+        result = Calculator.div(a, b)
     case Calculator.DIV_INTEGER.value:
-        result = Calculator.div_integer(a,b)
+        result = Calculator.div_integer(a, b)
     case Calculator.ABS.value:
         result = Calculator.abs(a)
     case Calculator.POW.value:
-        result = Calculator.pow(a,b)
+        result = Calculator.pow(a, b)
     case _:
         raise ValueError("Неизвестная команда")
 
 print(result)
-
