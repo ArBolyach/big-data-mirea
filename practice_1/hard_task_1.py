@@ -27,12 +27,17 @@ morze = {
     "z": "--..",
 }
 
-text = input().lower()
-result = ""
-for symbol in text:
-    if symbol == " ":
-        result += "\n"
-    else:
-        result += morze[symbol] + " "
+def main():
+    text = input().lower()
+    result = ""
+    for symbol in text:
+        if symbol == " ":
+            result += "\n"
+        else:
+            result += morze[symbol] + " "
 
-print(result)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()

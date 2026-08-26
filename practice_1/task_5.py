@@ -18,7 +18,12 @@ def solveSequence(array_1, array_2):
     return result
 
 
-a1 = [1, 2, 3, 4, 2, 1, 3, 4, 5, 6, 5, 4, 3, 2]
-a2 = ["a", "b", "c", "c", "c", "b", "a", "c", "a", "a", "b", "c", "b", "a"]
+def main():
+    a1 = [1, 2, 3, 4, 2, 1, 3, 4, 5, 6, 5, 4, 3, 2]
+    a2 = ["a", "b", "c", "c", "c", "b", "a", "c", "a", "a", "b", "c", "b", "a"]
 
-print(solveSequence(a1, a2))
+    print(solveSequence(a1, a2))
+
+
+if __name__ == "__main__":
+    main()

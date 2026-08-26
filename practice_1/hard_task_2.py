@@ -16,8 +16,13 @@ class Users:
             return "suggested name: " + new_name
 
 
-n: int = int(input())
-users_system = Users()
+def main():
+    n: int = int(input())
+    users_system = Users()
 
-for i in range(n):
-    print(users_system.addUser(input()))
+    for i in range(n):
+        print(users_system.addUser(input()))
+
+
+if __name__ == "__main__":
+    main()

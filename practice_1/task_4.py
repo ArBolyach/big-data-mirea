@@ -4,9 +4,6 @@
 # если N = 7, то программа должна вывести 1 2 2 3 3 3 4. Вывод элементов списка
 # через пробел – print(*list).
 
-a = int(input())
-
-
 def generateSequence(n: int):
     result = []
     for i in range(n):
@@ -16,4 +13,10 @@ def generateSequence(n: int):
             result.append(i)
 
 
-print(*generateSequence(a))
+def main():
+    a = int(input())
+    print(*generateSequence(a))
+
+
+if __name__ == "__main__":
+    main()

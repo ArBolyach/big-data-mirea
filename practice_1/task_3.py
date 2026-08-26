@@ -19,9 +19,14 @@ class Summator:
         return self._squareResult
 
 
-summator = Summator()
+def main():
+    summator = Summator()
 
-while summator.isZero == False:
-    summator.addNumber(float(input()))
+    while summator.isZero == False:
+        summator.addNumber(float(input()))
 
-print(summator.getResult())
+    print(summator.getResult())
+
+
+if __name__ == "__main__":
+    main()

@@ -4,37 +4,43 @@
 import pandas
 from sklearn.datasets import fetch_california_housing
 
-data: pandas.DataFrame = fetch_california_housing(as_frame=True).frame
 
-# Использовать метод info().
+def main():
+    data: pandas.DataFrame = fetch_california_housing(as_frame=True).frame
 
-print("Method info()")
-print(data.info())
+    # Использовать метод info().
 
-# Узнать, есть ли пропущенные значения, используя isna().sum().
+    print("Method info()")
+    print(data.info())
 
-print("  ")
-print("Method isna().sum()")
-print(data.isna().sum())
+    # Узнать, есть ли пропущенные значения, используя isna().sum().
 
-# Вывести записи, где средний возраст домов в районе более 50 лет и
-# население более 2500 человек, используя метод loc().
+    print("  ")
+    print("Method isna().sum()")
+    print(data.isna().sum())
 
-print("  ")
-print("Method loc()")
-print(data.loc[(data["HouseAge"] > 50) & (data["Population"] > 2500)])
+    # Вывести записи, где средний возраст домов в районе более 50 лет и
+    # население более 2500 человек, используя метод loc().
 
-# Узнать максимальное и минимальное значения медианной
-# стоимости дома.
+    print("  ")
+    print("Method loc()")
+    print(data.loc[(data["HouseAge"] > 50) & (data["Population"] > 2500)])
 
-print("  ")
-print("Max and min med home price")
-print("max: " + str(data["MedHouseVal"].max()))
-print("min: " + str(data["MedHouseVal"].min()))
+    # Узнать максимальное и минимальное значения медианной
+    # стоимости дома.
 
-# Используя метод apply(), вывести на экран название признака и его
-# среднее значение.
+    print("  ")
+    print("Max and min med home price")
+    print("max: " + str(data["MedHouseVal"].max()))
+    print("min: " + str(data["MedHouseVal"].min()))
 
-print("  ")
-print("method apply()")
-data.apply(lambda column: print(column.name, column.mean()))
+    # Используя метод apply(), вывести на экран название признака и его
+    # среднее значение.
+
+    print("  ")
+    print("method apply()")
+    data.apply(lambda column: print(column.name, column.mean()))
+
+
+if __name__ == "__main__":
+    main()

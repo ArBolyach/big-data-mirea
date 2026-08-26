@@ -20,15 +20,19 @@ class FigureArea:
         return math.pi * (r**2)
 
 
-circleArea: float = FigureArea.getCircleArea(2)
-triangleArea: float = FigureArea.getTriangleArea(5, 2)
-squareArea: float = FigureArea.getSquareArea(10, 12)
+def main():
+    circleArea: float = FigureArea.getCircleArea(2)
+    triangleArea: float = FigureArea.getTriangleArea(5, 2)
+    squareArea: float = FigureArea.getSquareArea(10, 12)
 
-figureAreas = {
-    "площадь круга": circleArea,
-    "площадь треугольника": triangleArea,
-    "площадь прямоугольника": squareArea,
-}
+    figureAreas = {
+        "площадь круга": circleArea,
+        "площадь треугольника": triangleArea,
+        "площадь прямоугольника": squareArea,
+    }
+
+    print(figureAreas)
 
 
-print(figureAreas)
+if __name__ == "__main__":
+    main()

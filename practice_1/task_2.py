@@ -39,22 +39,27 @@ class Calculator(Enum):
         return a**b
 
 
-a, b, symbol, result = float(input()), float(input()), input(), 0
+def main():
+    a, b, symbol, result = float(input()), float(input()), input(), 0
 
-match symbol:
-    case Calculator.SUM.value:
-        result = Calculator.sum(a, b)
-    case Calculator.SUB.value:
-        result = Calculator.sub(a, b)
-    case Calculator.DIV.value:
-        result = Calculator.div(a, b)
-    case Calculator.DIV_INTEGER.value:
-        result = Calculator.div_integer(a, b)
-    case Calculator.ABS.value:
-        result = Calculator.abs(a)
-    case Calculator.POW.value:
-        result = Calculator.pow(a, b)
-    case _:
-        raise ValueError("Неизвестная команда")
+    match symbol:
+        case Calculator.SUM.value:
+            result = Calculator.sum(a, b)
+        case Calculator.SUB.value:
+            result = Calculator.sub(a, b)
+        case Calculator.DIV.value:
+            result = Calculator.div(a, b)
+        case Calculator.DIV_INTEGER.value:
+            result = Calculator.div_integer(a, b)
+        case Calculator.ABS.value:
+            result = Calculator.abs(a)
+        case Calculator.POW.value:
+            result = Calculator.pow(a, b)
+        case _:
+            raise ValueError("Неизвестная команда")
 
-print(result)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
