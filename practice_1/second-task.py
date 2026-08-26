@@ -38,9 +38,8 @@ class Calculator(Enum):
         return a**b
 
 
-a, b = float(input()), float(input())
-symbol = input()
-result:float = 0
+a, b, symbol, result = float(input()), float(input()), input(), 0
+
 match symbol:
     case Calculator.SUM.value:
         result = Calculator.sum(a,b)
@@ -56,5 +55,6 @@ match symbol:
         result = Calculator.pow(a,b)
     case _:
         raise ValueError("Неизвестная команда")
+
 print(result)
 
